@@ -1,0 +1,24 @@
+{% for p in cartproduct %}
+				<tr>
+					<td>{{p.op_id.p_name}}</td>
+					<td><img  src="static/{{p.op_id.photo}}"  height="100" width="100" /></td>
+					<td>{{p.op_id.p_discription}}</td>
+					<td>{{p.op_id.price}}</td>
+					<td>
+						<input type="text" value="{{p.qty}}" class="qty" data-a="{{p.cart_id}}">
+						<br>
+						<button class="qty_btn" value="Update" data-a="{{p.cart_id}}">Update Qty</button>
+
+					</td>
+					<td><button class="delete_btn" data-a="{{p.cart_id}}">Delete</button></td>
+				</tr>
+		{% endfor %}
+		 <tr>
+					<td colspan="2"></td>
+					<td >
+							
+								 <td>Total amount</td>
+								<td><div id="totala"></div></td>
+							
+					</td>
+				</tr>			

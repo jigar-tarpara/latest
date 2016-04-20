@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<html>
+<head>
+
+<script>
+	$(document).ready(function(){
+		$(".well").click(function(){
+			//redirect("product");+$("#pro").val()
+			//alert("ok"+$(this).text().trim());
+			window.open("/product?p="+$(this).text().trim()+"&cat="+$(this).attr("data-h")+"&mcat="+$(this).attr("data-c"),"_self");
+			//$.redirect('product', {'arg1': 'value1', 'arg2': 'value2'});
+		});
+	});
+</script>
+
+</head>
+<body>
+<div class="container">
+
+<div class="col-sm-3">
+									<right>
+									{% for n in alphasub %}
+									<div class="well hello" data-h="{{sub}}" data-c="{{cat}}" >
+									{{ n.as_name }}
+								</div>
+									{% endfor %}
+									</right>
+</div>
+</div>
+</body>

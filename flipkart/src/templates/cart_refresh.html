@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<script>
+			jQuery(document).ready(function($){
+			
+				$.ajax({
+			 		 	type:"get",
+			 		 	url:"/count/",
+			 		 	success:function(data){
+			 		 		
+			 		 		$(".simpleCart_total").text("$"+data);
+			 		 		
+						}
+					});
+
+				$.ajax({
+					type:"get",
+			 		 	url:"/qtykart/",
+			 		 	success:function(data){
+			 		 		$(".simpleCart_quantity").text(data);
+			 		 		
+						}
+				});
+			
+				
+			
+			});
+		</script>
+
+	<a href="/cartpage">
+		<h3> <span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)<img src="{% static 'images/bag.png' %}" alt=""></h3>
+	</a>	
+	<p><a href="javascript:;" class="simpleCart_empty">(empty card)</a></p>
+	<div class="clearfix"> </div>
