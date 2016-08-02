@@ -71,8 +71,8 @@ TEMPLATES = [
     },
 ]
 EMAIL_HOST="smtp.gmail.com"
-EMAIL_HOST_USER="lanetteam.jigar@gmail.com"
-EMAIL_HOST_PASSWORD="lanetteam1"
+EMAIL_HOST_USER="mail id"
+EMAIL_HOST_PASSWORD="password"
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
 
